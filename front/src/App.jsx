@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Navbar from './Navbar'
 import './App.css'
 import cat from "./assets/cutecat.jpg"
+import Home from "./Home"
 
 function App() {
 
@@ -13,7 +14,7 @@ function App() {
       <div>
         <div className='min-h-screen'>
           <Navbar />
-
+          <Home />
 
 
 
