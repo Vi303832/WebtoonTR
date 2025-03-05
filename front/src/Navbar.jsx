@@ -46,7 +46,7 @@ function Navbar() {
                             </button>
                         </div>
 
-                    <div className='text-2xl p-10 text-white hidden max-md:flexé'>
+                        <div className='text-2xl p-10 text-white hidden max-md:flex'>
 
                             <FaBars />
 

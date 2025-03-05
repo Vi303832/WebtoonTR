@@ -1,22 +1,5 @@
-/* Pagination'ın sadece noktaların etrafında olması için */
-.swiper-pagination {
-  display: inline-flex !important; /* Pagination sadece noktalar kadar geniş olacak */
-  justify-content: center; /* Noktaları hizala */
-  align-items: center;
-  gap: 5px; /* Noktalar arasındaki mesafe */
-  background-color: rgba(0, 0, 0, 0.3); /* Hafif siyah saydam arka plan */
-  border-radius: 20px; /* Hafif yuvarlak hatlar */
-  padding: 5px 15px; /* Noktaların çevresindeki boşluk */
-  position: absolute;
-display:flex; 
 
-  bottom: 10px;
-  transform: translateX(-50%);
-  z-index: 10;
-  width: 0px;
-  height:30px;
-  min-width: fit-content; /* İçeriğe göre genişlik ayarla */
-}
+
 
 /* Pagination noktalarının stilini ayarla */
 .swiper-pagination-bullet {

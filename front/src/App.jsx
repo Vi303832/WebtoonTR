@@ -3,6 +3,7 @@ import Navbar from './Navbar'
 import './App.css'
 import cat from "./assets/cutecat.jpg"
 import Home from "./Home"
+import Content from './Content'
 
 function App() {
 
@@ -13,8 +14,13 @@ function App() {
     <>
       <div>
         <div className='min-h-screen'>
-          <Navbar />
-          <Home />
+          <div className='h-full relative'>
+            <Navbar />
+            <Home />
+          </div>
+          <div className='h-full relative'>
+            <Content />
+          </div>
 
 
 
