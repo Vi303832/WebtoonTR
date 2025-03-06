@@ -15,3 +15,9 @@
   background-color: white !important; /* Aktif nokta rengi */
   transform: scale(1.2); /* Aktif noktayı biraz büyüt */
 }
+
+@media (max-width: 652px) {
+  .custom-hidden {
+    display: none;
+  }
+}

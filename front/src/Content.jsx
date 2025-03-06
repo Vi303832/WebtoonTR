@@ -41,7 +41,7 @@ function Content() {
 
             <div className='min-h-screen w-full  bg-zinc-800 flex justify-center py-10'>
                 <div className='h-full flex flex-col w-[80%]   '>
-                    {/*   Datayı 8de sınırlayıp tek seferde böyle gösterebiliriz. Ama cardları saklamam lazım 
+                    {/*} Datayı 8de sınırlayıp tek seferde böyle gösterebiliriz. Ama cardları saklamam lazım
                     <div className='flex justify-between flex-wrap '>
                         <div className='w-[24%]  flex justify-center bg-amber-300 items-center '>
                             <Card />
@@ -68,35 +68,53 @@ function Content() {
                             <Card />
                         </div>
                     </div>
- */}
+                    
+                    
+                    */}
 
 
-                    {/* Datayı 4lü/3lü/2li 2 gruba bölüp Datagrup[0] => / Datagrup[1] => diye burada 2 satır fetch edebiliriz.   */}
 
-                    <div className='flex justify-between max-md:justify-around max-sm:justify-between gap-5 '>
-                        <Card yeni={yeni} />
-                        <Card />
-                        <Card />
-                        <div className="max-md:hidden" >
+
+                    {/*  Datayı 4lü/3lü/2li 2 gruba bölüp Datagrup[0] => / Datagrup[1] => diye burada 2 satır fetch edebiliriz.*/}
+                    <div className='bg-yellow-400'>
+                        <div className='flex justify-between max-md:justify-around max-sm:justify-between w-full overflow-hidden gap-5 max-sm:gap-2  '>
+                            <Card yeni={yeni} />
                             <Card />
-                        </div>
-                        <div className="max-lg:hidden" >
-                            <Card />
-                        </div>
+                            <div className="max-[772px]:hidden" >
+                                <Card />
+                            </div>
+                            <div className="max-[1124px]:hidden" >
+                                <Card />
+                            </div>
+                            <div className="max-[1378px]:hidden" >
+                                <Card />
+                            </div>
 
+                        </div>
                     </div>
 
-                    <div className='flex justify-between max-md:justify-around gap-5     pt-10'>
-                        <CardE />
-                        <CardE />
-                        <CardE />
-                        <div className="max-md:hidden" >
+
+                    <div className='bg-yellow-400'>
+                        <div className='flex justify-between max-md:justify-around max-sm:justify-between w-full overflow-hidden gap-5 max-sm:gap-2  '>
                             <CardE />
-                        </div>
-                        <div className="max-lg:hidden" >
                             <CardE />
+                            <div className="max-[772px]:hidden" >
+                                <CardE />
+                            </div>
+                            <div className="max-[1124px]:hidden" >
+                                <CardE />
+                            </div>
+                            <div className="max-[1378px]:hidden" >
+                                <CardE />
+                            </div>
+
                         </div>
                     </div>
+
+
+
+
+
 
 
 
