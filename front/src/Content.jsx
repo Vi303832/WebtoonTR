@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Hero1 from "./assets/Hero1.png"
 import Card from './Card'
 
 
 function Content() {
 
-
+    let [yeni, setyeni] = useState(true)
 
     return (
         <div className='font-Inter w-full '>
@@ -38,9 +38,10 @@ function Content() {
                 </div>
 
             </div>
-            {/* Datayı 4lü 2 gruba bölüp Datagrup[0] => / Datagrup[1] => diye burada 2 satır fetch edebiliriz.   */}
-            <div className='h-[500vh] w-full  bg-zinc-800 flex justify-center py-10'>
+
+            <div className='min-h-screen w-full  bg-zinc-800 flex justify-center py-10'>
                 <div className='h-full flex flex-col w-[80%]   '>
+                    {/*   Datayı 8de sınırlayıp tek seferde böyle gösterebiliriz. Ama cardları saklamam lazım 
                     <div className='flex justify-between flex-wrap '>
                         <div className='w-[24%]  flex justify-center bg-amber-300 items-center '>
                             <Card />
@@ -66,11 +67,37 @@ function Content() {
                         <div className='w-[24%]  flex justify-center'>
                             <Card />
                         </div>
+                    </div>
+ */}
 
 
+                    {/* Datayı 4lü/3lü/2li 2 gruba bölüp Datagrup[0] => / Datagrup[1] => diye burada 2 satır fetch edebiliriz.   */}
 
+                    <div className='flex justify-between max-md:justify-around max-sm:justify-between gap-5 '>
+                        <Card yeni={yeni} />
+                        <Card />
+                        <div className="max-md:hidden" >
+                            <Card />
+                        </div>
+                        <div className="max-lg:hidden" >
+                            <Card />
+                        </div>
 
                     </div>
+
+                    <div className='flex justify-between max-md:justify-around gap-5     pt-10'>
+                        <Card />
+                        <Card />
+                        <div className="max-md:hidden" >
+                            <Card />
+                        </div>
+                        <div className="max-lg:hidden" >
+                            <Card />
+                        </div>
+                    </div>
+
+
+
 
 
 
