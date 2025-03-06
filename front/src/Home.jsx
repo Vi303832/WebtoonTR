@@ -1,7 +1,7 @@
 import React from 'react'
 import Slider from './Slider'
 import bg from "./assets/bg.jpg"
-import thumb from "./assets/thumb.png"
+
 
 
 function Home() {
