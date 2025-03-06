@@ -33,13 +33,13 @@ function Home() {
                 {/*Hero1*/}
 
                 <div className=' z-30 relative w-full h-[164px] my-2 gap-2 flex  justify-center '>
-                    <div className='w-[33%] bg-green-300 rounded-4xl max-md:w-[48%]'>
+                    <div className='w-[33%] bg-[#4CAADF] rounded-4xl max-md:w-[48%]'>
 
                     </div>
-                    <div className='w-[33%] bg-green-300 rounded-4xl max-md:hidden '>
+                    <div className='w-[33%] bg-[#4CAADF] rounded-4xl max-md:hidden '>
 
                     </div>
-                    <div className='w-[33%] bg-green-300 rounded-4xl max-md:w-[48%]'>
+                    <div className='w-[33%] bg-[#4CAADF] rounded-4xl max-md:w-[48%]'>
 
                     </div>
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Hero1 from "./assets/Hero1.png"
 import Card from './Card'
-
+import CardE from './CardE'
 
 function Content() {
 
@@ -76,6 +76,7 @@ function Content() {
                     <div className='flex justify-between max-md:justify-around max-sm:justify-between gap-5 '>
                         <Card yeni={yeni} />
                         <Card />
+                        <Card />
                         <div className="max-md:hidden" >
                             <Card />
                         </div>
@@ -86,13 +87,14 @@ function Content() {
                     </div>
 
                     <div className='flex justify-between max-md:justify-around gap-5     pt-10'>
-                        <Card />
-                        <Card />
+                        <CardE />
+                        <CardE />
+                        <CardE />
                         <div className="max-md:hidden" >
-                            <Card />
+                            <CardE />
                         </div>
                         <div className="max-lg:hidden" >
-                            <Card />
+                            <CardE />
                         </div>
                     </div>
 

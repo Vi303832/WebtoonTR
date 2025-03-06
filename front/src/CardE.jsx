@@ -13,7 +13,7 @@ function Card({ yeni }) {
                 {/*image*/}
                 <div className='relative '>
 
-                    <img src='https://i1.wp.com/webtoonturkiye.com/wp-content/uploads/2025/03/oyun-baslasin-webtoon-thumbnail.jpg' className='rounded' />
+                    <img src='https://i3.wp.com/webtoonturkiye.com/wp-content/uploads/2024/11/new.png' className='rounded' />
                     {yeni && <div className='absolute bg-[#4CAADF] bottom-0 px-1 rounded flex items-center text-[14px] '><GiAcousticMegaphone className='text-lg ' />YENİ</div>}
 
                 </div>
