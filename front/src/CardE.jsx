@@ -6,7 +6,6 @@ function Card({ yeni }) {
 
 
 
-
     return (
         <div className='font-Inter  max-lg:h-[324px]  h-[384px] w-[208px]  flex items-center flex-col justify-start '>
             <div className='h-[216px] bg-white max-lg:w-[192px] w-[208px] rounded flex flex-col  '>

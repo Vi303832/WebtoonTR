@@ -4,6 +4,8 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import cutecat from "./assets/cutecat.jpg";
 import thumb from "./assets/thumb.png";
 import two from "./assets/02.jpg";
+import { FaAngleRight } from "react-icons/fa6";
+import { FaAngleLeft } from "react-icons/fa6";
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -13,6 +15,11 @@ const slidesData = [
     [cutecat, thumb, two, two, two],
     [thumb, two, two, two, cutecat],
 ];
+const slidesData1 = [
+    [cutecat, thumb, two, two,],
+    [thumb, two, two, two,],
+];
+
 
 function Newcomes() {
     const swiperRef = useRef(null);
@@ -24,7 +31,9 @@ function Newcomes() {
                     Yeni Gelenler
                 </div>
                 <div className='w-full h-[30vh]     '>
-                    <div className='w-full'>
+                    {/*Xl*/}
+                    <div className='w-full max-lg:hidden block'>
+
                         <Swiper
                             style={{ position: "relative" }}
                             modules={[Pagination, Navigation]}
@@ -47,6 +56,42 @@ function Newcomes() {
                                                 <img
                                                     src={image}
                                                     alt={`slide ${slideIndex + 1} image ${imageIndex + 1}`}
+
+                                                    className="w-full h-[30vh] object-cover rounded-lg"
+                                                />
+                                            </div>
+                                        ))}
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    </div>
+
+                    {/*lg*/}
+                    <div className='w-full hidden max-lg:block'>
+                        <Swiper
+                            style={{ position: "relative" }}
+                            modules={[Pagination, Navigation]}
+                            spaceBetween={10}
+                            slidesPerView={1}
+                            loop={true}
+                            pagination={{
+                                dynamicBullets: true,
+                                clickable: true,
+                            }}
+                            onSwiper={(swiper) => {
+                                swiperRef.current = swiper;
+                            }}
+                        >
+                            {slidesData1.map((slideImages, slideIndex) => (
+                                <SwiperSlide key={slideIndex}>
+                                    <div className="flex justify-between space-x-4">
+                                        {slideImages.map((image, imageIndex) => (
+                                            <div key={imageIndex} className="w-[25%] h-[30vh]">
+                                                <img
+                                                    src={image}
+                                                    alt={`slide ${slideIndex + 1} image ${imageIndex + 1}`}
+
                                                     className="w-full h-[30vh] object-cover rounded-lg"
                                                 />
                                             </div>
@@ -58,17 +103,18 @@ function Newcomes() {
                     </div>
 
                     <button
-                        className="absolute left-[-40px] top-45  transform  z-10 bg-white p-2 rounded-full shadow-lg"
+                        className="absolute left-[-60px] top-40  transform opacity-50 z-10 text-3xl cursor-pointer hover:opacity-100 bg-white p-2 rounded-full shadow-lg"
                         onClick={() => swiperRef.current?.slidePrev()}
                     >
-                        &lt;
+                        <FaAngleLeft />
+
                     </button>
 
                     <button
-                        className="absolute right-[-40px] top-45  transform  z-10 bg-white p-2 rounded-full shadow-lg"
+                        className="absolute right-[-60px] top-40 opacity-50 hover:opacity-100 cursor-pointer transform text-3xl  z-10 bg-white p-2 rounded-full shadow-lg"
                         onClick={() => swiperRef.current?.slideNext()}
                     >
-                        &gt;
+                        <FaAngleRight />
                     </button>
                 </div>
 
@@ -81,4 +127,4 @@ function Newcomes() {
     );
 }
 
-export default Newcomes;
+export default Newcomes

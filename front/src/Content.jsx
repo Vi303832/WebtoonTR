@@ -3,6 +3,7 @@ import Hero1 from "./assets/Hero1.png"
 import Card from './Card'
 import CardE from './CardE'
 
+
 function Content() {
 
     let [yeni, setyeni] = useState(true)
@@ -76,7 +77,7 @@ function Content() {
 
 
                     {/*  Datayı 4lü/3lü/2li 2 gruba bölüp Datagrup[0] => / Datagrup[1] => diye burada 2 satır fetch edebiliriz.*/}
-                    <div className='bg-yellow-400'>
+                    <div className=''>
                         <div className='flex justify-between max-md:justify-around max-sm:justify-between w-full overflow-hidden gap-5 max-sm:gap-2  '>
                             <Card yeni={yeni} />
                             <Card />
@@ -94,7 +95,7 @@ function Content() {
                     </div>
 
 
-                    <div className='bg-yellow-400'>
+                    <div className=''>
                         <div className='flex justify-between max-md:justify-around max-sm:justify-between w-full overflow-hidden gap-5 max-sm:gap-2  '>
                             <CardE />
                             <CardE />
