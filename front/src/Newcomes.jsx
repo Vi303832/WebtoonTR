@@ -19,13 +19,17 @@ const slidesData1 = [
     [cutecat, thumb, two, two,],
     [thumb, two, two, two,],
 ];
+const slidesData2 = [
+    [cutecat, thumb,],
+    [thumb, two,]
+];
 
 
 function Newcomes() {
     const swiperRef = useRef(null);
 
     return (
-        <div className='font-Inter w-full bg-zinc-800 min-h-[50vh] flex justify-center'>
+        <div className='font-Inter w-full bg-zinc-800 min-h-[50vh] flex justify-center overflow-hidden'>
             <div className='w-[80%] h-[70vh] mt-10 flex flex-col items-center relative'>
                 <div className='text-4xl text-white py-5'>
                     Yeni Gelenler
@@ -68,7 +72,7 @@ function Newcomes() {
                     </div>
 
                     {/*lg*/}
-                    <div className='w-full hidden max-lg:block'>
+                    <div className='w-full hidden max-lg:block max-md:hidden'>
                         <Swiper
                             style={{ position: "relative" }}
                             modules={[Pagination, Navigation]}
@@ -88,6 +92,41 @@ function Newcomes() {
                                     <div className="flex justify-between space-x-4">
                                         {slideImages.map((image, imageIndex) => (
                                             <div key={imageIndex} className="w-[25%] h-[30vh]">
+                                                <img
+                                                    src={image}
+                                                    alt={`slide ${slideIndex + 1} image ${imageIndex + 1}`}
+
+                                                    className="w-full h-[30vh] object-cover rounded-lg"
+                                                />
+                                            </div>
+                                        ))}
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    </div>
+
+                    {/*md*/}
+                    <div className='w-full hidden max-md:block'>
+                        <Swiper
+                            style={{ position: "relative" }}
+                            modules={[Pagination, Navigation]}
+                            spaceBetween={0}
+                            slidesPerView={1}
+                            loop={true}
+                            pagination={{
+                                dynamicBullets: true,
+                                clickable: true,
+                            }}
+                            onSwiper={(swiper) => {
+                                swiperRef.current = swiper;
+                            }}
+                        >
+                            {slidesData2.map((slideImages, slideIndex) => (
+                                <SwiperSlide key={slideIndex}>
+                                    <div className="flex justify-between space-x-4">
+                                        {slideImages.map((image, imageIndex) => (
+                                            <div key={imageIndex} className="w-[50%] h-[30vh]">
                                                 <img
                                                     src={image}
                                                     alt={`slide ${slideIndex + 1} image ${imageIndex + 1}`}
